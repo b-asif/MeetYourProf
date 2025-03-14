@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.geometry.Insets.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="com.example.meetyourprof.OfficeHourController"
+            prefHeight="400.0" prefWidth="600.0">
+
+    <left>
+        <VBox spacing="10" padding="30" style="-fx-background-color: #1c2b42; -fx-padding: 10;">
+            <Label text="Schedule Meeting" style="-fx-text-fill: white; -fx-font-size: 16px; -fx-font-weight: bold;"/>
+            <Button text="CS 151 Zoom" maxWidth="-Infinity"/>
+            <Button text="In-Person CS49" maxWidth="-Infinity"/>
+        </VBox>
+
+    </left>
+
+    <center>
+        <VBox spacing="20">
+            <HBox spacing="10">
+                <TextField promptText="Search Course..."/>
+                <Button text="filter"/>
+            </HBox>
+
+            <VBox spacing="10">
+                <Label text="Select Semester"/>
+                <ComboBox fx:id="semesterDropDown"/>
+
+                <Label text="Select Days"/>
+                    <HBox spacing="10">
+                        <CheckBox text="M"/>
+                        <CheckBox text="T"/>
+                        <CheckBox text="W"/>
+                        <CheckBox text="TH"/>
+                        <CheckBox text="F"/>
+                    </HBox>
+            </VBox>
+
+            <VBox spacing="10">
+                <Label text="Course Code"/>
+                <TextField fx:id="courseCode" text="Math 42"/>
+
+                <Label text="Course Name"/>
+                <TextField fx:id="courseName" text="Discrete Math"/>
+
+                <Label text="Section Number"/>
+                <TextField fx:id="sectionNumber" text="04"/>
+
+            </VBox>
+
+        </VBox>
+
+    </center>
+
+</BorderPane>
