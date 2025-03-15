@@ -5,12 +5,34 @@
 <?import javafx.scene.layout.VBox?>
 
 <?import javafx.scene.control.Button?>
-<VBox alignment="CENTER" spacing="20.0" xmlns:fx="http://javafx.com/fxml"
-      fx:controller="com.example.meetyourprof.HomeController">
-    <padding>
-        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0"/>
-    </padding>
 
-    <Label text="Meet Your Professor"/>
-    <Button text="Schedule Office House!" onAction="#goToOfficeHoursPage"/>
-</VBox>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Text?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.StackPane?>
+<AnchorPane xmlns:fx="http://javafx.com/fxml"
+            fx:controller="com.example.meetyourprof.HomeController"
+            style="-fx-background-color: #e6dfc9;">
+    <HBox prefHeight="150" alignment = "CENTER" style="-fx-background-color: #1c2b42;" prefWidth="1450" >
+        <children>
+            <Label text="MeetYourProf" style="-fx-letter-spacing: 150px; -fx-font-size: 48; -fx-text-fill: white; -fx-font-weight: bold; -fx-padding: 10px;"/>
+        </children>
+    </HBox>
+
+    <StackPane alignment="CENTER" AnchorPane.topAnchor="250" AnchorPane.leftAnchor="0" AnchorPane.rightAnchor="0">
+        <HBox spacing="250" alignment="CENTER" layoutY="120">
+                <VBox alignment="CENTER" spacing="20" style= "-fx-background-color: #1c2b42; -fx-font-weight: bold; -fx-background-radius: 20px; -fx-padding: 5px 15px;" prefWidth="370" prefHeight="350">
+                    <Button text="Schedule an Appointment"  onAction="#goToOfficeHoursPage" style=" -fx-wrap-text: true; -fx-font-size: 25; -fx-background-color: #1c2b42; -fx-text-fill: white;"/>
+                </VBox>
+
+            <VBox alignment="CENTER" spacing="20" style= "-fx-background-color: #1c2b42; -fx-font-weight: bold; -fx-background-radius: 20px; -fx-padding: 5px 15px;" prefWidth="350" prefHeight="350">
+                <Label text="View My Appointments" style=" -fx-font-size: 25; -fx-background-color: #1c2b42; -fx-text-fill: white;" />
+            </VBox>
+        </HBox>
+    </StackPane>
+
+
+</AnchorPane>
+
+
+
