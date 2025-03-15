@@ -9,24 +9,20 @@
             fx:controller="com.example.meetyourprof.OfficeHourController"
             prefHeight="600.0" prefWidth="900.0" style="-fx-background-color: #e6dfc9;">
 
+
     <left>
-        <VBox spacing="10"  style="-fx-background-color: #1c2b42; -fx-padding: 10;" prefWidth="200">
+        <VBox spacing="10"  style="-fx-background-color: #1c2b42; -fx-padding: 10;" prefWidth="200" >
             <Label text="Schedule Meeting" style="-fx-text-fill: white; -fx-font-size: 16px; -fx-font-weight: bold;"/>
             <Button text="CS 151 Zoom" style="-fx-background-color: #e6dfc9; -fx-text-fill: black; -fx-font-size: 14px; -fx-border-radius: 5px;" maxWidth="200"/>
             <Button text="In-Person CS49" style="-fx-background-color: #e6dfc9; -fx-text-fill: black; -fx-font-size: 14px; -fx-border-radius: 5px;" maxWidth="200"/>
         </VBox>
-
     </left>
 
-<center>
-    <VBox spacing="10"  style="-fx-padding: 20;" alignment="TOP_CENTER">
-            <HBox spacing="10" style=" -fx-padding: 50 0 0 0; ">
-                <Region style="-fx-pref-width: 50px;"/>
-                <TextField promptText="Search Course..." style="-fx-font-size: 14px;"/>
-                <Button text="filter" style="-fx-background-color: #1c2b42; -fx-text-fill: white; -fx-font-size: 14px; -fx-border-radius: 5px;"/>
-            </HBox>
+<center >
+    <VBox spacing="10"  alignment="CENTER" style="-fx-padding: 50;">
 
-        <HBox spacing="250" alignment="CENTER_LEFT" >
+
+        <HBox spacing="50" alignment="CENTER" style="-fx-padding: 50;" >
 
             <StackPane>
                 <Region style="-fx-padding: 5px 10px; -fx-background-color: #e6dfc9; -fx-border-color: transparent;
@@ -62,13 +58,9 @@
                 <Label text="Section Number" alignment="CENTER" style="-fx-pref-width: 200px; -fx-background-color: #1c2b42; -fx-text-fill: white; -fx-font-weight: bold;  -fx-background-radius: 15px; -fx-padding: 5px 15px;" GridPane.rowIndex="2" GridPane.columnIndex="0"/>
                 <TextField fx:id="sectionNumber" text="04" GridPane.rowIndex="2" GridPane.columnIndex="1"/>
             </GridPane>
-
         </HBox>
 
-    </VBox>
-</center>
-    <bottom>
-        <VBox spacing="10" alignment="CENTER" style="-fx-background-color: #1c2b42; -fx-border-radius: 10px; -fx-text-fill: white; -fx-padding: 15; -fx-pref-width: 450; -fx-pref-height: 150;">
+        <VBox spacing="10" alignment="CENTER" style="-fx-background-color: #1c2b42; -fx-border-radius: 10px; -fx-text-fill: white; -fx-padding: 15; -fx-pref-width: 250; -fx-max-width: 250 -fx-pref-height: 150;">
             <Label text="TIME SLOT" alignment="CENTER" style="-fx-text-fill: white; -fx-font-size: 16px; -fx-font-weight: bold;"/>
             <HBox spacing="20" alignment="CENTER">
                 <Label text="FROM" style="-fx-text-fill: white;"/>
@@ -76,9 +68,11 @@
                 <Label text="TO" style="-fx-text-fill: white;"/>
                 <TextField fx:id="endTime" text="4:45 PM" style="-fx-pref-width: 120;"/>
             </HBox>
-
         </VBox>
-    </bottom>
 
+    </VBox>
+
+
+</center>
 
 </BorderPane>
