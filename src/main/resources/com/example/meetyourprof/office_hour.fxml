@@ -10,7 +10,7 @@
             prefHeight="600.0" prefWidth="900.0" style="-fx-background-color: #e6dfc9;">
 
     <left>
-        <VBox spacing="10"  style="-fx-background-color: #1c2b42; -fx-padding: 10;">
+        <VBox spacing="10"  style="-fx-background-color: #1c2b42; -fx-padding: 10;" prefWidth="200">
             <Label text="Schedule Meeting" style="-fx-text-fill: white; -fx-font-size: 16px; -fx-font-weight: bold;"/>
             <Button text="CS 151 Zoom" style="-fx-background-color: #e6dfc9; -fx-text-fill: black; -fx-font-size: 14px; -fx-border-radius: 5px;" maxWidth="200"/>
             <Button text="In-Person CS49" style="-fx-background-color: #e6dfc9; -fx-text-fill: black; -fx-font-size: 14px; -fx-border-radius: 5px;" maxWidth="200"/>
@@ -18,17 +18,16 @@
 
     </left>
 
-
-<HBox spacing="250" >
-    <Region fx:id="spacer"/>
+<center>
+    <VBox spacing="10"  style="-fx-padding: 20;">
             <HBox spacing="10" style=" -fx-padding: 50 0 0 0; ">
                 <Region style="-fx-pref-width: 50px;"/>
                 <TextField promptText="Search Course..." style="-fx-font-size: 14px;"/>
                 <Button text="filter" style="-fx-background-color: #1c2b42; -fx-text-fill: white; -fx-font-size: 14px; -fx-border-radius: 5px;"/>
             </HBox>
 
-
-            <VBox spacing="10" style="-fx-background-color: #e6dfc9; -fx-border-width: 3px; -fx-border-color: #1c2b42; -fx-border-radius: 10px; -fx-background-color: white; -fx-effect: dropshadow(gaussian, gray, 10, 0.5, 0, 0); -fx-padding: 15; -fx-pref-width: 350; -fx-pref-height: 200; -fx-max-width: 200;">
+        <HBox spacing="550" alignment="CENTER_LEFT">
+            <VBox spacing="10" alignment="CENTER" style="-fx-background-color: #e6dfc9; -fx-border-width: 3px; -fx-border-color: #1c2b42; -fx-border-radius: 10px; -fx-background-color: white; -fx-effect: dropshadow(gaussian, gray, 10, 0.5, 0, 0); -fx-padding: 15; -fx-pref-width: 300; -fx-pref-height: 200; -fx-max-width: 350;">
 
                 <Label text="Select Semester" style="-fx-font-weight: bold; -fx-font-size: 14px;"/>
                 <ComboBox fx:id="semesterDropDown" style="-fx-pref-width: 200; -fx-background-color: white; -fx-border-color: black;"/>
@@ -37,7 +36,7 @@
                 <TextField fx:id="year" promptText="Enter year"  style="-fx-pref-width: 250; -fx-font-size: 14px; -fx-text-fill: black; -fx-background-color: white; -fx-border-color: black;"/>
 
                 <Label text="Select Days" style="-fx-font-weight: bold; -fx-font-size: 14px;"/>
-                <HBox spacing="15">
+                <HBox spacing="15" alignment="CENTER">
                     <CheckBox text="M"/>
                     <CheckBox text="T"/>
                     <CheckBox text="W"/>
@@ -46,9 +45,9 @@
                 </HBox>
             </VBox>
 
-            <Region style="-fx-pref-width: 20px;"/>
 
-            <GridPane hgap="10" vgap="10" style="-fx-background-color: #e6dfc9; -fx-border-width: 3px; -fx-border-color: #1c2b42; -fx-border-radius: 10px; -fx-background-color: white; -fx-effect: dropshadow(gaussian, gray, 10, 0.5, 0, 0); -fx-padding: 15; -fx-pref-width: 350; -fx-pref-height: 150; -fx-max-width: 350;">
+
+            <GridPane hgap="10" vgap="10" alignment="CENTER" style="-fx-background-color: #e6dfc9; -fx-border-width: 3px; -fx-border-color: #1c2b42; -fx-border-radius: 10px; -fx-background-color: white; -fx-effect: dropshadow(gaussian, gray, 10, 0.5, 0, 0); -fx-padding: 15; -fx-pref-width: 300; -fx-pref-height: 100; -fx-max-width: 300;">
 
                 <Label text="Course Code" style="-fx-font-weight: bold;" GridPane.rowIndex="0" GridPane.columnIndex="0"/>
                 <TextField fx:id="courseCode" text="Math 42" GridPane.rowIndex="0" GridPane.columnIndex="1"/>
@@ -62,7 +61,7 @@
 
         </HBox>
 
-            <VBox spacing="10" style="-fx-background-color: #1c2b42; -fx-border-radius: 10px; -fx-text-fill: white; -fx-alignment: center; -fx-padding: 15; -fx-pref-width: 350; -fx-pref-height: 150; -fx-max-width: 550;">
+            <VBox spacing="10" style="-fx-background-color: #1c2b42; -fx-border-radius: 10px; -fx-text-fill: white; -fx-alignment: center; -fx-padding: 15; -fx-pref-width: 350; -fx-pref-height: 200; -fx-max-width: 550;">
                 <Label text="TIME SLOT" style="-fx-text-fill: white; -fx-font-size: 16px; -fx-font-weight: bold;"/>
                 <HBox spacing="10">
                     <Label text="FROM" style="-fx-text-fill: white;"/>
@@ -73,6 +72,8 @@
                     <TextField fx:id="endTime" text="4:45 PM"/>
                 </HBox>
             </VBox>
+    </VBox>
+</center>
 
 
 </BorderPane>

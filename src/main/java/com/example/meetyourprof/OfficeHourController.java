@@ -12,7 +12,7 @@ public class OfficeHourController {
     @FXML private TextField year;
     @FXML private TextField startTime;
     @FXML private TextField endTime;
-    @FXML private Region spacer;
+
 
 
     @FXML
