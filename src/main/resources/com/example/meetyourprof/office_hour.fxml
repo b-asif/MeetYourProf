@@ -1,61 +1,78 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
-<?import javafx.geometry.Insets.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
+<?import javafx.geometry.Insets?>
 <BorderPane xmlns="http://javafx.com/javafx"
             xmlns:fx="http://javafx.com/fxml"
             fx:controller="com.example.meetyourprof.OfficeHourController"
-            prefHeight="400.0" prefWidth="600.0">
+            prefHeight="600.0" prefWidth="900.0" style="-fx-background-color: #e6dfc9;">
 
     <left>
-        <VBox spacing="10" padding="30" style="-fx-background-color: #1c2b42; -fx-padding: 10;">
+        <VBox spacing="10"  style="-fx-background-color: #1c2b42; -fx-padding: 10;">
             <Label text="Schedule Meeting" style="-fx-text-fill: white; -fx-font-size: 16px; -fx-font-weight: bold;"/>
-            <Button text="CS 151 Zoom" maxWidth="-Infinity"/>
-            <Button text="In-Person CS49" maxWidth="-Infinity"/>
+            <Button text="CS 151 Zoom" style="-fx-background-color: #e6dfc9; -fx-text-fill: black; -fx-font-size: 14px; -fx-border-radius: 5px;" maxWidth="200"/>
+            <Button text="In-Person CS49" style="-fx-background-color: #e6dfc9; -fx-text-fill: black; -fx-font-size: 14px; -fx-border-radius: 5px;" maxWidth="200"/>
         </VBox>
 
     </left>
 
-    <center>
-        <VBox spacing="20">
-            <HBox spacing="10">
-                <TextField promptText="Search Course..."/>
-                <Button text="filter"/>
+
+<HBox spacing="250" >
+    <Region fx:id="spacer"/>
+            <HBox spacing="10" style=" -fx-padding: 50 0 0 0; ">
+                <Region style="-fx-pref-width: 50px;"/>
+                <TextField promptText="Search Course..." style="-fx-font-size: 14px;"/>
+                <Button text="filter" style="-fx-background-color: #1c2b42; -fx-text-fill: white; -fx-font-size: 14px; -fx-border-radius: 5px;"/>
             </HBox>
 
-            <VBox spacing="10">
-                <Label text="Select Semester"/>
-                <ComboBox fx:id="semesterDropDown"/>
 
-                <Label text="Select Days"/>
-                    <HBox spacing="10">
-                        <CheckBox text="M"/>
-                        <CheckBox text="T"/>
-                        <CheckBox text="W"/>
-                        <CheckBox text="TH"/>
-                        <CheckBox text="F"/>
-                    </HBox>
+            <VBox spacing="10" style="-fx-background-color: #e6dfc9; -fx-border-width: 3px; -fx-border-color: #1c2b42; -fx-border-radius: 10px; -fx-background-color: white; -fx-effect: dropshadow(gaussian, gray, 10, 0.5, 0, 0); -fx-padding: 15; -fx-pref-width: 350; -fx-pref-height: 200; -fx-max-width: 200;">
+
+                <Label text="Select Semester" style="-fx-font-weight: bold; -fx-font-size: 14px;"/>
+                <ComboBox fx:id="semesterDropDown" style="-fx-pref-width: 200; -fx-background-color: white; -fx-border-color: black;"/>
+
+                <Label text="Enter Year" style="-fx-font-weight: bold; -fx-font-size: 14px; -fx-pref-width: 100"/>
+                <TextField fx:id="year" promptText="Enter year"  style="-fx-pref-width: 250; -fx-font-size: 14px; -fx-text-fill: black; -fx-background-color: white; -fx-border-color: black;"/>
+
+                <Label text="Select Days" style="-fx-font-weight: bold; -fx-font-size: 14px;"/>
+                <HBox spacing="15">
+                    <CheckBox text="M"/>
+                    <CheckBox text="T"/>
+                    <CheckBox text="W"/>
+                    <CheckBox text="TH"/>
+                    <CheckBox text="F"/>
+                </HBox>
             </VBox>
 
-            <VBox spacing="10">
-                <Label text="Course Code"/>
-                <TextField fx:id="courseCode" text="Math 42"/>
+            <Region style="-fx-pref-width: 20px;"/>
 
-                <Label text="Course Name"/>
-                <TextField fx:id="courseName" text="Discrete Math"/>
+            <GridPane hgap="10" vgap="10" style="-fx-background-color: #e6dfc9; -fx-border-width: 3px; -fx-border-color: #1c2b42; -fx-border-radius: 10px; -fx-background-color: white; -fx-effect: dropshadow(gaussian, gray, 10, 0.5, 0, 0); -fx-padding: 15; -fx-pref-width: 350; -fx-pref-height: 150; -fx-max-width: 350;">
 
-                <Label text="Section Number"/>
-                <TextField fx:id="sectionNumber" text="04"/>
+                <Label text="Course Code" style="-fx-font-weight: bold;" GridPane.rowIndex="0" GridPane.columnIndex="0"/>
+                <TextField fx:id="courseCode" text="Math 42" GridPane.rowIndex="0" GridPane.columnIndex="1"/>
 
+                <Label text="Course Name" style="-fx-font-weight: bold;" GridPane.rowIndex="1" GridPane.columnIndex="0"/>
+                <TextField fx:id="courseName" text="Discrete Math" GridPane.rowIndex="1" GridPane.columnIndex="1"/>
+
+                <Label text="Section Number" style="-fx-font-weight: bold;" GridPane.rowIndex="2" GridPane.columnIndex="0"/>
+                <TextField fx:id="sectionNumber" text="04" GridPane.rowIndex="2" GridPane.columnIndex="1"/>
+            </GridPane>
+
+        </HBox>
+
+            <VBox spacing="10" style="-fx-background-color: #1c2b42; -fx-border-radius: 10px; -fx-text-fill: white; -fx-alignment: center; -fx-padding: 15; -fx-pref-width: 350; -fx-pref-height: 150; -fx-max-width: 550;">
+                <Label text="TIME SLOT" style="-fx-text-fill: white; -fx-font-size: 16px; -fx-font-weight: bold;"/>
+                <HBox spacing="10">
+                    <Label text="FROM" style="-fx-text-fill: white;"/>
+                    <TextField fx:id="startTime" text="3:30 PM"/>
+                </HBox>
+                <HBox spacing="10">
+                    <Label text="TO" style="-fx-text-fill: white;"/>
+                    <TextField fx:id="endTime" text="4:45 PM"/>
+                </HBox>
             </VBox>
 
-        </VBox>
-
-    </center>
 
 </BorderPane>

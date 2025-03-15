@@ -2,11 +2,8 @@ package com.example.meetyourprof;
 
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.control.Label;
-import javafx.stage.Stage;
-import javafx.event.ActionEvent;
-import javafx.scene.Node;
 import javafx.stage.Stage;
 
 
@@ -21,9 +18,16 @@ public class HomeController {
 
     @FXML
     private void goToOfficeHoursPage() throws IOException {
-        FXMLLoader loader = new FXMLLoader(getClass().getClassLoader().getResource("office_hour.fxml"));
-        Scene officeHour = new Scene(loader.load(), 1920, 1080);
-        stage.setScene(officeHour);
+        try {
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("office_hour.fxml"));
+            Parent root = loader.load();  // Load first
+            Scene officeHour = new Scene(root, 1920, 1080);
+            stage.setScene(officeHour);
+            stage.show();  // Ensure stage is visible
+        } catch (IOException e) {
+            e.printStackTrace();  // Debug loading errors
+        }
+
     }
 
 }
