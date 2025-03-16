@@ -20,10 +20,11 @@ public class HomeController {
     private void goToOfficeHoursPage() throws IOException {
         try {
             FXMLLoader loader = new FXMLLoader(getClass().getResource("office_hour.fxml"));
-            Parent root = loader.load();  // Load first
-            Scene officeHour = new Scene(root, 1920, 1080);
-            stage.setScene(officeHour);
-            stage.show();  // Ensure stage is visible
+            Parent root = loader.load();
+            OfficeHourController officeHourController = loader.getController();
+            officeHourController.setStage(stage); // Pass the stage
+            stage.getScene().setRoot(root);
+            stage.show();
         } catch (IOException e) {
             e.printStackTrace();  // Debug loading errors
         }
