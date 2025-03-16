@@ -14,10 +14,9 @@
 <?import javafx.scene.layout.StackPane?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
-
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.image.Image?>
-<BorderPane prefHeight="600.0" prefWidth="900.0" style="-fx-background-color: #e6dfc9;" xmlns="http://javafx.com/javafx/20.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.meetyourprof.OfficeHourController">
+<BorderPane prefHeight="600.0" prefWidth="900.0" style="-fx-background-color: #e6dfc9;" xmlns="http://javafx.com/javafx/20.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="s25.cs151.application.OfficeHourController">
 
     <left>
         <VBox prefWidth="200" spacing="10" style="-fx-background-color: #1c2b42; -fx-padding: 10;">

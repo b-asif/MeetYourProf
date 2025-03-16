@@ -1,9 +1,8 @@
-package com.example.meetyourprof;
+package s25.cs151.application;
 
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
-import javafx.scene.Scene;
 import javafx.stage.Stage;
 
 

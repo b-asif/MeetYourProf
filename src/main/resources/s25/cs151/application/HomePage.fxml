@@ -11,7 +11,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.StackPane?>
 <AnchorPane xmlns:fx="http://javafx.com/fxml"
-            fx:controller="com.example.meetyourprof.HomeController"
+            fx:controller="s25.cs151.application.HomeController"
             style="-fx-background-color: #e6dfc9;">
     <HBox prefHeight="150" alignment = "CENTER" style="-fx-background-color: #1c2b42;" prefWidth="1450">
             <Label text="MeetYourProf" alignment="CENTER" style="-fx-font-size: 48; -fx-text-fill: white; -fx-font-weight: bold; -fx-padding: 10px;"/>
