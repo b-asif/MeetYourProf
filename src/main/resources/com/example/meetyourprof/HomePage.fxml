@@ -13,10 +13,8 @@
 <AnchorPane xmlns:fx="http://javafx.com/fxml"
             fx:controller="com.example.meetyourprof.HomeController"
             style="-fx-background-color: #e6dfc9;">
-    <HBox prefHeight="150" alignment = "CENTER" style="-fx-background-color: #1c2b42;" prefWidth="1450" >
-        <children>
-            <Label text="MeetYourProf" style="-fx-letter-spacing: 150px; -fx-font-size: 48; -fx-text-fill: white; -fx-font-weight: bold; -fx-padding: 10px;"/>
-        </children>
+    <HBox prefHeight="150" alignment = "CENTER" style="-fx-background-color: #1c2b42;" prefWidth="1450">
+            <Label text="MeetYourProf" alignment="CENTER" style="-fx-font-size: 48; -fx-text-fill: white; -fx-font-weight: bold; -fx-padding: 10px;"/>
     </HBox>
 
     <StackPane alignment="CENTER" AnchorPane.topAnchor="250" AnchorPane.leftAnchor="0" AnchorPane.rightAnchor="0">
