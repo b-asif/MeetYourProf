@@ -1,0 +1,203 @@
+left panel for application
+<left>
+        <VBox prefWidth="200" spacing="10" style="-fx-background-color: #1c2b42; -fx-padding: 10;">
+            <Label style="-fx-text-fill: white; -fx-font-size: 16px; -fx-font-weight: bold;" text="Schedule Meeting" />
+            <Button maxWidth="200" style="-fx-background-color: #e6dfc9; -fx-text-fill: black; -fx-font-size: 14px; -fx-border-radius: 5px;" text="CS 151 Zoom" />
+            <Button maxWidth="200" style="-fx-background-color: #e6dfc9; -fx-text-fill: black; -fx-font-size: 14px; -fx-border-radius: 5px;" text="In-Person CS49" />
+        </VBox>
+
+ </left>
+
+search bar and application name
+            <HBox prefHeight="76.0" prefWidth="660.0" spacing="10" style="-fx-padding: 0 0 20 0;">
+                <VBox prefHeight="42.0" prefWidth="240.0" style="-fx-spacing: 20;">
+                    <children>
+                        <Label text="Meet Your Prof" textFill="#1c2b42" maxWidth="-Infinity" wrapText="true">
+                            <font>
+                                <Font name="System Bold" size="21.0" />
+                            </font>
+                        </Label>
+                        <HBox prefHeight="101.0" prefWidth="240.0" style="-fx-spacing: 6;">
+                            <children>
+                                <TextField promptText="Search Course..." style="-fx-font-size: 14px;" />
+                                <Button style="-fx-background-color: #1c2b42; -fx-text-fill: white; -fx-font-size: 14px; -fx-border-radius: 5px;" text="filter" />
+                            </children>
+                        </HBox>
+                    </children>
+                </VBox>
+            </HBox>
+
+
+            <GridPane alignment="CENTER" hgap="10" vgap="15" style="-fx-background-color: #e6dfc9; -fx-background-radius: 15px; -fx-border-radius: 10px; -fx-effect: dropshadow(gaussian, gray, 10, 0.5, 0, 0);  -fx-padding: 5px 10px; -fx-pref-width: 400; -fx-pref-height: 150;">
+
+
+                    <Label alignment="CENTER" style="-fx-pref-width: 200px; -fx-background-color: #1c2b42; -fx-text-fill: white; -fx-font-weight: bold;  -fx-background-radius: 15px;  -fx-padding: 5px 5px; -fx-effect: dropshadow(gaussian, gray, 10, 0.5, 0, 0);" text="Course Code" GridPane.columnIndex="0" GridPane.rowIndex="0" />
+                    <TextField fx:id="courseCode" alignment="CENTER" text="Math 42" style="-fx-text-fill: #d3d3d3" GridPane.columnIndex="1" GridPane.rowIndex="0" />
+
+                    <Label alignment="CENTER" style="-fx-pref-width: 200px; -fx-background-color: #1c2b42; -fx-text-fill: white; -fx-font-weight: bold;  -fx-background-radius: 15px; -fx-padding: 5px 15px; -fx-effect: dropshadow(gaussian, gray, 10, 0.5, 0, 0);" text="Course Name" GridPane.columnIndex="0" GridPane.rowIndex="1" />
+                    <TextField fx:id="courseName" alignment="CENTER" text="Discrete Math" style="-fx-text-fill: #d3d3d3" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+
+                    <Label alignment="CENTER" style="-fx-pref-width: 200px; -fx-background-color: #1c2b42; -fx-text-fill: white; -fx-font-weight: bold;  -fx-background-radius: 15px; -fx-padding: 5px 15px; -fx-effect: dropshadow(gaussian, gray, 10, 0.5, 0, 0);" text="Section Number" GridPane.columnIndex="0" GridPane.rowIndex="2" />
+                    <TextField fx:id="sectionNumber" alignment="CENTER" text="04" style="-fx-text-fill: #d3d3d3" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                    <columnConstraints>
+                        <ColumnConstraints />
+                        <ColumnConstraints />
+                    </columnConstraints>
+                    <rowConstraints>
+                        <RowConstraints />
+                        <RowConstraints />
+                        <RowConstraints />
+                    </rowConstraints>
+                </GridPane>
+<HBox  spacing="5" prefWidth="660.0" style="-fx-padding: 40px 20px 20px 0;">
+            <VBox alignment="CENTER"  spacing="5" style="-fx-border-color: #1c2b42; -fx-border-radius: 10px; -fx-padding: 5px 10px; -fx-background-color: #1c2b42; -fx-border-radius: 10px; -fx-text-fill: white; -fx-padding: 10; -fx-pref-width: 250; -fx-pref-height: 250; ">
+                <Label alignment="CENTER" style="-fx-text-fill: white; -fx-font-size: 20px; -fx-font-weight: bold;" text="TIME SLOT" />
+                <ImageView fitWidth="100" fitHeight="100">
+                    <image>
+                        <Image url="@icons/schedule.png"></Image>
+                    </image>
+                </ImageView>
+            </VBox>
+               <GridPane alignment="CENTER" hgap="10" vgap="20" prefHeight="26.0" prefWidth="581.0" style="-fx-padding: 10; -fx-font-weight: bold;  -fx-background-radius: 15px; -fx-padding: 5px 15px; -fx-border-radius: 10px; -fx-effect: dropshadow(gaussian, gray, 10, 0.5, 0, 0);">
+                       <Label alignment="CENTER" text="FROM" style="-fx-pref-width: 200px; -fx-background-color: #1c2b42; -fx-text-fill: white; -fx-font-weight: bold;  -fx-background-radius: 15px; -fx-padding: 5px 15px;" GridPane.columnIndex="0" GridPane.rowIndex="0"/>
+                       <TextField fx:id="startTime" alignment="CENTER" style="-fx-pref-width: 120; -fx-font-weight: bold;  -fx-background-radius: 15px; -fx-padding: 5px 15px;" text="3:30 PM" GridPane.columnIndex="1" GridPane.rowIndex="0"/>
+                       <Label alignment="CENTER" text="TO" style="-fx-pref-width: 200px; -fx-background-color: #1c2b42; -fx-text-fill: white; -fx-font-weight: bold;  -fx-background-radius: 15px; -fx-padding: 5px 15px;" GridPane.columnIndex="0" GridPane.rowIndex="1"/>
+                       <TextField fx:id="endTime" alignment="CENTER" style="-fx-pref-width: 120; -fx-font-weight: bold;  -fx-background-radius: 15px; -fx-padding: 5px 15px;" text="4:45 PM" GridPane.columnIndex="1" GridPane.rowIndex="1"/>
+
+               </GridPane>
+           </HBox>
+
+
+
+
+
+
+           -----
+
+           <?xml version="1.0" encoding="UTF-8"?>
+
+           <?import javafx.scene.control.Button?>
+           <?import javafx.scene.control.CheckBox?>
+           <?import javafx.scene.control.ComboBox?>
+           <?import javafx.scene.control.Label?>
+           <?import javafx.scene.control.TextField?>
+           <?import javafx.scene.image.Image?>
+           <?import javafx.scene.image.ImageView?>
+           <?import javafx.scene.layout.AnchorPane?>
+           <?import javafx.scene.layout.BorderPane?>
+           <?import javafx.scene.layout.ColumnConstraints?>
+           <?import javafx.scene.layout.GridPane?>
+           <?import javafx.scene.layout.HBox?>
+           <?import javafx.scene.layout.RowConstraints?>
+           <?import javafx.scene.layout.StackPane?>
+           <?import javafx.scene.layout.VBox?>
+
+           <BorderPane prefHeight="600.0" prefWidth="900.0" style="-fx-background-color: #8f9294;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="s25.cs151.application.OfficeHourController">
+               <!--Creating the sidebar panel -->
+               <left>
+                   <VBox alignment="TOP_CENTER" maxWidth="700" prefWidth="200" spacing="10" style="-fx-background-color: #1c2b42; -fx-padding: 70 5 5 5;">
+                       <Button style="-fx-background-color: transparent; -fx-border-color: transparent; -fx-text-fill: white; -fx-font-size: 15;" text="Home" textAlignment="CENTER">
+                           <graphic>
+                               <ImageView fitHeight="20" fitWidth="20">
+                                   <image>
+                                       <Image url="@icons/home_png.png" />
+                                   </image>
+                               </ImageView>
+                           </graphic>
+                       </Button>
+
+                       <Button maxWidth="-Infinity" style="-fx-background-color: transparent; -fx-border-color: transparent; -fx-text-fill: white; -fx-font-size: 15;" text="Set Availability" textAlignment="LEFT">
+                           <graphic>
+                               <ImageView fitHeight="20" fitWidth="20">
+                                   <image>
+                                       <Image url="@icons/event_available.png" />
+                                   </image>
+                               </ImageView>
+                           </graphic>
+
+                       </Button>
+                       <Button maxWidth="-Infinity" style="-fx-background-color: transparent; -fx-border-color: transparent; -fx-text-fill: white; -fx-font-size: 15;" text="Notifications" textAlignment="LEFT">
+                           <graphic>
+                               <ImageView fitHeight="20" fitWidth="20">
+                                   <image>
+                                       <Image url="@icons/schedule_send.png" />
+                                   </image>
+                               </ImageView>
+                           </graphic>
+                       </Button>
+                       <Button maxWidth="-Infinity" style="-fx-background-color: transparent; -fx-border-color: transparent; -fx-text-fill: white; -fx-font-size: 15;" text="Manage Appointments" textAlignment="LEFT">
+                           <graphic>
+                               <ImageView fitHeight="20" fitWidth="20">
+                                   <image>
+                                       <Image url="@icons/calendar.png" />
+                                   </image>
+                               </ImageView>
+                           </graphic>
+                       </Button>
+                       <Button maxWidth="-Infinity" style="-fx-background-color: transparent; -fx-border-color: transparent; -fx-text-fill: white; -fx-font-size: 15;" text="Meeting History" textAlignment="LEFT">
+                           <graphic>
+                               <ImageView fitHeight="20" fitWidth="20">
+                                   <image>
+                                       <Image url="@icons/work_history.png" />
+                                   </image>
+                               </ImageView>
+                           </graphic>
+
+                       </Button>
+
+                   </VBox>
+
+               </left>
+               <!--Header -->
+               <top>
+                   <HBox spacing="10" style="-fx-background-color: #1c2b42; -fx-padding: 20px">
+                       <Label style="-fx-font-size: 18px; -fx-text-fill: white; -fx-line-spacing: 2px;" text="Meet Your Professor" />
+                   </HBox>
+               </top>
+
+               <center>
+                   <StackPane style="-fx-background-color: #F7F7F7; -fx-padding: 20px;">
+                       <AnchorPane style="-fx-background-color: white; -fx-effect: dropshadow(gaussian, gray, 10, 0.5, 0, 0); -fx-background-radius: 10px; -fx-padding: 20px; -fx-pref-width: 400px; -fx-pref-height: 300px;">
+
+                           <GridPane fx:id="formContainer" hgap="15" vgap="20">
+                               <columnConstraints>
+                                   <ColumnConstraints hgrow="ALWAYS" />
+                               </columnConstraints>
+                             <rowConstraints>
+                                <RowConstraints />
+                             </rowConstraints>
+
+                           </GridPane>
+
+                         <VBox alignment="CENTER" layoutX="406.0" layoutY="30.0" prefHeight="320.0" prefWidth="307.0" spacing="20">
+                             <!--Semester Dropdown-->
+                             <HBox alignment="CENTER" spacing="5" style="-fx-pref-width: 350px; -fx-padding: 10">
+                                 <Label style="-fx-pref-width: 370px; -fx-padding: 20 0 20 0 " text="Select Semester" />
+                                 <ComboBox fx:id="semesterDropDown" promptText="Spring" style="-fx-pref-width: 370; -fx-font-family: 'Sans-serif';-fx-font-size: 14px; -fx-prompt-text-fill: #d3d3d3; -fx-background-radius: 15px; " GridPane.columnIndex="0" GridPane.rowIndex="0" HBox.hgrow="ALWAYS" />
+                             </HBox>
+
+                             <!--Selection of Days-->
+                             <Label alignment="CENTER" style="-fx-font-weight: bold; -fx-font-size: 14px;" text="Select Days" />
+
+                             <HBox alignment="CENTER" spacing="20" style="-fx-padding: 0 0 0 20; fx-pref-width: 900px;  -fx-max-width: Infinity;" GridPane.columnIndex="0" GridPane.rowIndex="1">
+                                 <CheckBox text="M" />
+                                 <CheckBox text="T" />
+                                 <CheckBox text="W" />
+                                 <CheckBox style="-fx-min-width: 40px;" text="TH" />
+                                 <CheckBox text="F" />
+                             </HBox>
+
+                             <HBox spacing="15" style="-fx-padding: 10px;" />
+
+                                   <!--Enter Year-->
+                             <TextField fx:id="year" alignment="CENTER" promptText="Enter year" style=" -fx-background-color: #1c2b42; -fx-text-fill: #d3d3d3;  -fx-background-radius: 15px; -fx-padding: 5px 5px; -fx-max-width: 200; -fx-pref-width: 200; -fx-font-size: 14px; " />
+                         </VBox>
+                           <Button layoutX="491.0" layoutY="448.0" onAction="#goToHomePage" style="-fx-background-color: #1c2b42; -fx-text-fill: white; -fx-font-weight: bold; -fx-background-radius: 10px; -fx-padding: 10px 15px;" text="Dashboard" />
+                           <Button layoutX="603.0" layoutY="446.0" style="-fx-background-color: #1c2b42; -fx-text-fill: white; -fx-font-weight: bold; -fx-background-radius: 10px; -fx-padding: 10px 15px;" text="Submit" />
+
+                   </AnchorPane>
+               </StackPane>
+            </center>
+
+
+           </BorderPane>

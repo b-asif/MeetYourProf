@@ -22,6 +22,7 @@ public class Main extends Application {
         stage.setScene(home);
         stage.setTitle("Meet Your Professor");
         stage.show();
+
     }
 
     public static void main(String[] args) {
