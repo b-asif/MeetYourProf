@@ -53,11 +53,11 @@ public class TableViewController  {
     }
 
     private void loadTable() {
-        String query = "SELECT * FROM office_hours ORDER BY year DESC " +
-                "CASE semester" +
+        String query = "SELECT * FROM office_hours " + "ORDER BY year DESC, " +
+                "CASE semester " +
                 "WHEN 'WINTER' THEN 1 " +
                 "WHEN 'FALL' THEN 2 " +
-                "WHEN 'SUMMER ' THEN 3 " +
+                "WHEN 'SUMMER' THEN 3 " +
                 "WHEN 'SPRING' THEN 4 " +
                 "END ASC;";
         try (Connection conn = DriverManager.getConnection("jdbc:sqlite:/Users/bushraasif/IdeaProjects/MeetYourProf/office_hours.db");
