@@ -1,9 +1,12 @@
 package s25.cs151.application;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.control.CheckBox;
 import javafx.scene.control.ComboBox;
+import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.GridPane;
 import javafx.stage.Stage;
@@ -64,6 +67,19 @@ public class OfficeHourController {
             FXMLLoader loader = new FXMLLoader(getClass().getResource("HomePage.fxml"));
             Parent root = loader.load();
             HomeController control = loader.getController();
+            control.setStage(stage);
+            stage.getScene().setRoot(root);
+            stage.show();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+    @FXML
+    private void goToTableView() {
+        try {
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("tableView.fxml"));
+            Parent root = loader.load();
+            TableViewController control = loader.getController();
             control.setStage(stage);
             stage.getScene().setRoot(root);
             stage.show();

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="s25.cs151.application.TableViewController"
+            prefHeight="400.0" prefWidth="600.0">
+    <TableView fx:id="tableView">
+        <columns>
+            <TableColumn fx:id="id" text="ID"/>
+            <TableColumn fx:id="semester" text="Semester"/>
+            <TableColumn fx:id="year" text="Year"/>
+            <TableColumn fx:id="days" text="Days"/>
+        </columns>
+    </TableView>
+
+</AnchorPane>

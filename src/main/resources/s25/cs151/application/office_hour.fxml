@@ -64,6 +64,15 @@
                         </image>
                     </ImageView>
                 </graphic>
+            </Button>
+            <Button onAction="#goToTableView" maxWidth="-Infinity" style="-fx-background-color: transparent; -fx-border-color: transparent; -fx-text-fill: white; -fx-font-size: 15;" text="View Office Hour" textAlignment="LEFT">
+                <graphic>
+                    <ImageView fitHeight="20" fitWidth="20">
+                        <image>
+                            <Image url="@icons/work_history.png" />
+                        </image>
+                    </ImageView>
+                </graphic>
 
             </Button>
 
