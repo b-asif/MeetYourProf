@@ -32,17 +32,18 @@ public class OfficeHourController {
     }
     @FXML
     private void submitOfficeHourSchedule() {
-        Alert storedInfo = new Alert(Alert.AlertType.INFORMATION);
-        storedInfo.setTitle("Office Hour Recorded for the Semester!");
-        storedInfo.setHeaderText(null);
-        storedInfo.setContentText("Visit the Schedule page to see all stored Semester Office Hours");
 
-        // Show the alert
-        storedInfo.showAndWait();
         String semester = semesterDropDown.getValue();
         String yearVal = year.getText();
         StringBuilder daysSelected = new StringBuilder();
 
+        if(yearVal.length() != 4) {
+            Alert invalidYear = new Alert(Alert.AlertType.ERROR);
+            invalidYear.setTitle("Invalid year entry");
+            invalidYear.setHeaderText("Please enter a valid 4-digit year.");
+            invalidYear.showAndWait();
+            return;
+        }
         if(mCheckBox.isSelected()) {
             daysSelected.append("M, ");
         }
@@ -60,6 +61,11 @@ public class OfficeHourController {
         }
         if(semester != null && !yearVal.isEmpty() && daysSelected.length() > 0) {
             OfficeHourDataBase.insertOfficeHourSchedule(semester, yearVal, daysSelected.toString());
+            Alert storedInfo = new Alert(Alert.AlertType.INFORMATION);
+            storedInfo.setTitle("Office Hour Recorded for the Semester!");
+            storedInfo.setHeaderText(null);
+            storedInfo.setContentText("Visit the Schedule page to see all stored Semester Office Hours");
+            storedInfo.showAndWait();
         }
         else{
             System.out.println("You need to fill the form.");
