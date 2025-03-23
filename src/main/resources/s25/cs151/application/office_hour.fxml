@@ -91,29 +91,29 @@
             <AnchorPane style="-fx-background-color: white; -fx-effect: dropshadow(gaussian, gray, 10, 0.5, 0, 0); -fx-background-radius: 10px; -fx-padding: 20px; -fx-pref-width: 400px; -fx-pref-height: 300px;">
                 <Button text="Submit" onAction="#submitOfficeHourSchedule" style="-fx-background-color: #1c2b42; -fx-text-fill: white; -fx-font-weight: bold; -fx-background-radius: 10px; -fx-padding: 10px 15px;"  AnchorPane.bottomAnchor="20.0" AnchorPane.rightAnchor="20.0" />
                 <Label alignment="CENTER" layoutX="137.0" layoutY="142.0" prefHeight="57.0" prefWidth="143.0" style="-fx-pref-width: 100px; -fx-padding: 20 0 20 0;" text="Select Semester" AnchorPane.leftAnchor="137.0" AnchorPane.topAnchor="142.0">
-               <font>
-                  <Font name="System Bold" size="13.0" />
-               </font>
-            </Label>
+                    <font>
+                        <Font name="System Bold" size="13.0" />
+                    </font>
+                </Label>
                 <ComboBox fx:id="semesterDropDown" layoutX="336.0" layoutY="177.0" prefHeight="25.0" prefWidth="282.0" promptText="Spring" style="-fx-pref-width: 370; -fx-font-family: 'Sans-serif';-fx-font-size: 14px; -fx-prompt-text-fill: #d3d3d3; -fx-background-radius: 15px; " AnchorPane.leftAnchor="336.0" AnchorPane.rightAnchor="82.0" />
 
-               <!--Selection of Days-->
-               <Label alignment="CENTER" layoutX="173.0" layoutY="235.0" style="-fx-font-weight: bold; -fx-font-size: 14px;" text="Select Days" />
+                <!--Selection of Days-->
+                <Label alignment="CENTER" layoutX="173.0" layoutY="235.0" style="-fx-font-weight: bold; -fx-font-size: 14px;" text="Select Days" />
 
-               <HBox alignment="CENTER" layoutX="319.0" layoutY="227.0" prefHeight="18.0" prefWidth="295.0" spacing="20" style="-fx-padding: 0 0 0 20; fx-pref-width: 900px;  -fx-max-width: Infinity;" HBox.hgrow="ALWAYS">
-                   <CheckBox fx:id="mCheckBox" text="M" />
-                   <CheckBox fx:id="tCheckBox" text="T" />
-                   <CheckBox fx:id="wCheckBox" text="W" />
-                   <CheckBox fx:id="thCheckBox" style="-fx-min-width: 40px;" text="TH" />
-                   <CheckBox fx:id="fCheckBox" text="F" />
-               </HBox>
+                <HBox alignment="CENTER" layoutX="319.0" layoutY="227.0" prefHeight="18.0" prefWidth="295.0" spacing="20" style="-fx-padding: 0 0 0 20; fx-pref-width: 900px;  -fx-max-width: Infinity;" HBox.hgrow="ALWAYS">
+                    <CheckBox fx:id="mCheckBox" text="M" />
+                    <CheckBox fx:id="tCheckBox" text="T" />
+                    <CheckBox fx:id="wCheckBox" text="W" />
+                    <CheckBox fx:id="thCheckBox" style="-fx-min-width: 40px;" text="TH" />
+                    <CheckBox fx:id="fCheckBox" text="F" />
+                </HBox>
 
-                     <!--Enter Year-->
-               <TextField fx:id="year" alignment="CENTER" layoutX="254.0" layoutY="290.0" maxWidth="426.0" prefHeight="1.0" prefWidth="426.0" promptText="Enter year" style=" -fx-background-color: #1c2b42; -fx-text-fill: #d3d3d3;  -fx-background-radius: 15px; -fx-padding: 5px 5px; -fx-max-width: 200; -fx-pref-width: 50; -fx-font-size: 14px; " AnchorPane.leftAnchor="254.0" AnchorPane.rightAnchor="220.0" />
+                <!--Enter Year-->
+                <TextField fx:id="year" alignment="CENTER" layoutX="254.0" layoutY="290.0" maxWidth="426.0" prefHeight="1.0" prefWidth="426.0" promptText="Enter year" style=" -fx-background-color: #1c2b42; -fx-text-fill: #d3d3d3;  -fx-background-radius: 15px; -fx-padding: 5px 5px; -fx-max-width: 200; -fx-pref-width: 50; -fx-font-size: 14px; " AnchorPane.leftAnchor="254.0" AnchorPane.rightAnchor="220.0" />
 
-        </AnchorPane>
-    </StackPane>
- </center>
+            </AnchorPane>
+        </StackPane>
+    </center>
 
 
 </BorderPane>

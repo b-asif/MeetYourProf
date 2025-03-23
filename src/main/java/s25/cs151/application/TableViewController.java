@@ -26,8 +26,6 @@ public class TableViewController  {
 
     @FXML
     TableView<OfficeHour> tableView;
-    @FXML
-    private TableColumn<OfficeHour, Integer> id;
 
     @FXML
     private TableColumn<OfficeHour, String> semester;
@@ -46,48 +44,66 @@ public class TableViewController  {
         loadTable();
     }
 
+    @FXML
+    private void goToHomePage() throws IOException {
+        try {
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("HomePage.fxml"));
+            Parent root = loader.load();
+            HomeController homeController = loader.getController();
+            homeController.setStage(stage); // Pass the stage
+            stage.getScene().setRoot(root);
+            stage.show();
+        } catch (IOException e) {
+            e.printStackTrace();  // Debug loading errors
+        }
+
+    }
+
+    @FXML
+    private void goToOfficeHoursPage() throws IOException {
+        try {
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("office_hour.fxml"));
+            Parent root = loader.load();
+            OfficeHourController officeHourController = loader.getController();
+            officeHourController.setStage(stage); // Pass the stage
+            stage.getScene().setRoot(root);
+            stage.show();
+        } catch (IOException e) {
+            e.printStackTrace();  // Debug loading errors
+        }
+
+    }
+
     private void setUpTable() {
-        id.setCellValueFactory(new PropertyValueFactory<>("id"));
         semester.setCellValueFactory(new PropertyValueFactory<>("semester"));
         year.setCellValueFactory(new PropertyValueFactory<>("year"));
         days.setCellValueFactory(new PropertyValueFactory<>("days"));
 
         tableView.setItems(officehourslist);
     }
-    @FXML
-    private void goToOfficeHour() {
-        try {
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("office_hour.fxml"));
-            Parent root = loader.load();
-            OfficeHourController control = loader.getController();
-            control.setStage(stage);
-            stage.getScene().setRoot(root);
-            stage.show();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-    }
 
     private void loadTable() {
+        officehourslist.clear();
         String query = "SELECT * FROM office_hours " + "ORDER BY year DESC, " +
                 "CASE semester " +
-                "WHEN 'WINTER' THEN 1 " +
-                "WHEN 'FALL' THEN 2 " +
-                "WHEN 'SUMMER' THEN 3 " +
-                "WHEN 'SPRING' THEN 4 " +
+                "WHEN 'Winter' THEN 1 " +
+                "WHEN 'Fall' THEN 2 " +
+                "WHEN 'Summer' THEN 3 " +
+                "WHEN 'Spring' THEN 4 " +
                 "END ASC;";
-        try (Connection conn = DriverManager.getConnection("jdbc:sqlite:./office_hours.db");
+        try (Connection conn = DriverManager.getConnection("jdbc:sqlite:office_hours.db");
              Statement stmt = conn.createStatement();
              ResultSet result = stmt.executeQuery(query)) {
-                 while(result.next()) {
-                     officehourslist.add(new OfficeHour(
-                             result.getInt("id"),
-                             result.getString("semester"),
-                             result.getString("year"),
-                             result.getString("days")
+            while(result.next()) {
+                officehourslist.add(new OfficeHour(
+                        result.getString("semester"),
+                        result.getString("year"),
+                        result.getString("days")
 
-                     ));
-                 }
+                ));
+            }
+            tableView.refresh();
+
         }
         catch(SQLException e) {
             e.printStackTrace();
@@ -95,21 +111,5 @@ public class TableViewController  {
 
     }
 
-    @FXML
-    private void goToHomePage() {
-        try {
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("HomePage.fxml"));
-            Parent root = loader.load();
-            HomeController control = loader.getController();
-            control.setStage(stage);
-            stage.getScene().setRoot(root);
-            stage.show();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-    }
-
 
 }
-
-
