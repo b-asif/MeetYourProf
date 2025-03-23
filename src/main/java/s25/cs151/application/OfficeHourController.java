@@ -54,8 +54,9 @@ public class OfficeHourController {
         if(fCheckBox.isSelected()) {
             daysSelected.append("F, ");
         }
-        if(semester != null && !yearVal.isEmpty() && daysSelected.length() > 0) {
-            OfficeHourDataBase.insertOfficeHourSchedule(semester, yearVal, daysSelected.toString());
+        if(semester != null && !yearVal.isEmpty() && yearVal.length()==4 && daysSelected.length() > 0) {
+            String days = daysSelected.toString().replaceAll(", $", "");
+            OfficeHourDataBase.insertOfficeHourSchedule(semester, yearVal, days);
         }
         else{
             System.out.println("You need to fill the form.");

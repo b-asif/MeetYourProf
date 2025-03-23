@@ -5,7 +5,7 @@ import java.sql.PreparedStatement;
 import java.sql.SQLException;
 
 public class OfficeHourDataBase {
-    private static final String url = "jdbc:sqlite:/Users/bushraasif/IdeaProjects/MeetYourProf/office_hours.db";
+    private static final String url = "jdbc:sqlite:./office_hours.db";
     public static void createTable() {
         String sql = "CREATE TABLE IF NOT EXISTS office_hours (" +
                 "id INTEGER PRIMARY KEY AUTOINCREMENT, " +
@@ -14,7 +14,7 @@ public class OfficeHourDataBase {
                 "days TEXT" +
                 ");";
 
-        try (Connection conn = DriverManager.getConnection("jdbc:sqlite:/Users/bushraasif/IdeaProjects/MeetYourProf/office_hours.db");
+        try (Connection conn = DriverManager.getConnection("jdbc:sqlite:./office_hours.db");
              PreparedStatement pstmt = conn.prepareStatement(sql)) {
 
             pstmt.executeUpdate();
@@ -27,7 +27,7 @@ public class OfficeHourDataBase {
     public static void insertOfficeHourSchedule(String semester, String year, String days) {
         String sql = "INSERT INTO office_hours (semester, year, days) VALUES (?, ?, ?)";
 
-        try (Connection conn = DriverManager.getConnection("jdbc:sqlite:/Users/bushraasif/IdeaProjects/MeetYourProf/office_hours.db");
+        try (Connection conn = DriverManager.getConnection("jdbc:sqlite:./office_hours.db");
              PreparedStatement pstmt = conn.prepareStatement(sql)) {
 
             pstmt.setString(1, semester);
