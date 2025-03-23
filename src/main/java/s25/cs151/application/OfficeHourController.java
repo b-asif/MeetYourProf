@@ -4,10 +4,7 @@ import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
-import javafx.scene.control.CheckBox;
-import javafx.scene.control.ComboBox;
-import javafx.scene.control.TableView;
-import javafx.scene.control.TextField;
+import javafx.scene.control.*;
 import javafx.scene.layout.GridPane;
 import javafx.stage.Stage;
 
@@ -35,6 +32,13 @@ public class OfficeHourController {
     }
     @FXML
     private void submitOfficeHourSchedule() {
+        Alert storedInfo = new Alert(Alert.AlertType.INFORMATION);
+        storedInfo.setTitle("Office Hour Recorded for the Semester!");
+        storedInfo.setHeaderText(null);
+        storedInfo.setContentText("Visit the Schedule page to see all stored Semester Office Hours");
+
+        // Show the alert
+        storedInfo.showAndWait();
         String semester = semesterDropDown.getValue();
         String yearVal = year.getText();
         StringBuilder daysSelected = new StringBuilder();
