@@ -16,7 +16,7 @@
                 prefHeight="400.0" prefWidth="600.0">
         <left>
             <VBox alignment="TOP_CENTER" maxWidth="700" prefWidth="200" spacing="10" style="-fx-background-color: #1c2b42; -fx-padding: 70 5 5 5;">
-                <Button onAction="#goToHomePage" style="-fx-background-color: transparent; -fx-border-color: transparent; -fx-text-fill: white; -fx-font-size: 15;" text="Home" textAlignment="CENTER">
+                <Button text="Dashboard" onAction="#goToHomePage" style="-fx-background-color: transparent; -fx-border-color: transparent; -fx-text-fill: white; -fx-font-size: 15;"  textAlignment="CENTER">
                     <graphic>
                         <ImageView fitHeight="20" fitWidth="20">
                             <image>

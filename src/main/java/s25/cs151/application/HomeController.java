@@ -29,5 +29,18 @@ public class HomeController {
         }
 
     }
+    @FXML
+    private void goToTableView() {
+        try {
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("tableView.fxml"));
+            Parent root = loader.load();
+            TableViewController control = loader.getController();
+            control.setStage(stage);
+            stage.getScene().setRoot(root);
+            stage.show();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
 
 }
