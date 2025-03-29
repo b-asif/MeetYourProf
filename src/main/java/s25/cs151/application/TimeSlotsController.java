@@ -62,7 +62,7 @@ public class TimeSlotsController
             Alert storedInfo = new Alert(Alert.AlertType.INFORMATION);
             storedInfo.setTitle("Time Slot Recorded for the Semester!");
             storedInfo.setHeaderText(null);
-            storedInfo.setContentText("Visit the Schedule page to see all stored Time Slots for the Semester.");
+            storedInfo.setContentText("Visit the page to see all stored Time Slots for the Semester.");
             storedInfo.showAndWait();
         }
         else{
